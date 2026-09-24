@@ -1,0 +1,5 @@
+The files in data/ are MAT-file exports of the corresponding case files
+in matpower/data/ at the pinned MATPOWER submodule commit. Original source
+attribution and any case-specific license notices are retained in those
+source files. MATPOWER case data is not covered by MATPOWER's code license;
+see matpower/LICENSE and the individual case files.
