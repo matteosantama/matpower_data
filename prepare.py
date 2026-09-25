@@ -1,4 +1,4 @@
-"""Evaluate MATPOWER cases with MATLAB or Octave and export .mat files."""
+"""Export MATPOWER cases and label DC OPF feasibility (requires Optimization Toolbox)."""
 
 import argparse
 import subprocess
@@ -13,7 +13,7 @@ def matlab_string(path: Path) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--engine", choices=["octave", "matlab"], default="octave")
+    parser.add_argument("--engine", choices=["octave", "matlab"], default="matlab")
     parser.add_argument("--output", type=Path, default=ROOT / "data")
     args = parser.parse_args()
     command = (
